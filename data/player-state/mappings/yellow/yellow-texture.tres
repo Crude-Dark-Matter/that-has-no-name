@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PlayerAttributeMapping" load_steps=3 format=3 uid="uid://dqlredfc5dhgy"]
+
+[ext_resource type="Resource" uid="uid://cfckbgxf8qbcj" path="res://data/player-state/primitives/texture.tres" id="1_knxer"]
+[ext_resource type="Script" path="res://data/player-state/player_attribute_mapping.gd" id="2_hk646"]
+
+[resource]
+script = ExtResource("2_hk646")
+primitive = ExtResource("1_knxer")
+weight = 0.8

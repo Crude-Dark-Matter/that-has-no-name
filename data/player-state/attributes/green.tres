@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PlayerAttribute" load_steps=9 format=3 uid="uid://b3w6gp8lu7q5c"]
+
+[ext_resource type="Resource" uid="uid://crbkltgpdaul7" path="res://data/player-state/mappings/green/green-affection.tres" id="1_ve7ds"]
+[ext_resource type="Resource" uid="uid://8hp4a56aelbe" path="res://data/player-state/mappings/green/green-purpose.tres" id="2_mvlq1"]
+[ext_resource type="Resource" uid="uid://d2khxfl7i5m3s" path="res://data/player-state/mappings/green/green-empathy.tres" id="3_hwibs"]
+[ext_resource type="Resource" uid="uid://dsr37vy14l2kj" path="res://data/player-state/mappings/green/green-ecology.tres" id="4_x2lkp"]
+[ext_resource type="Resource" uid="uid://jq0tvomgoxhf" path="res://data/player-state/mappings/green/green-disgust.tres" id="5_2xtb4"]
+[ext_resource type="Resource" uid="uid://cuf1115o3pxtd" path="res://data/player-state/mappings/green/green-fear.tres" id="6_pc7hf"]
+[ext_resource type="Resource" uid="uid://c7krpr88fr780" path="res://data/player-state/mappings/green/green-certainty.tres" id="7_4t0df"]
+[ext_resource type="Script" path="res://data/player-state/player_attribute.gd" id="8_yigs2"]
+
+[resource]
+resource_name = "green"
+script = ExtResource("8_yigs2")
+primitives = Array[Resource("res://data/player-state/player_attribute_mapping.gd")]([ExtResource("1_ve7ds"), ExtResource("2_mvlq1"), ExtResource("3_hwibs"), ExtResource("4_x2lkp"), ExtResource("5_2xtb4"), ExtResource("6_pc7hf"), ExtResource("7_4t0df")])

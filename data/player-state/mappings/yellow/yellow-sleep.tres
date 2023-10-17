@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PlayerAttributeMapping" load_steps=3 format=3 uid="uid://co0kx6b288t6c"]
+
+[ext_resource type="Resource" uid="uid://bgdvt0pi54166" path="res://data/player-state/primitives/sleep.tres" id="1_yrfd7"]
+[ext_resource type="Script" path="res://data/player-state/player_attribute_mapping.gd" id="2_07xw8"]
+
+[resource]
+script = ExtResource("2_07xw8")
+primitive = ExtResource("1_yrfd7")
+weight = 1.4

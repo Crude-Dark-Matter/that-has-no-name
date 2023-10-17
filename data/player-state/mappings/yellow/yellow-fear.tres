@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PlayerAttributeMapping" load_steps=3 format=3 uid="uid://dnxqv1fmn63x4"]
+
+[ext_resource type="Resource" uid="uid://c64ku62omogny" path="res://data/player-state/primitives/fear.tres" id="1_h0clu"]
+[ext_resource type="Script" path="res://data/player-state/player_attribute_mapping.gd" id="2_s5r7b"]
+
+[resource]
+script = ExtResource("2_s5r7b")
+primitive = ExtResource("1_h0clu")
+weight = 2.0

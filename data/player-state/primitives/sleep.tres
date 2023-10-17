@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlayerStatePrimitive" load_steps=2 format=3 uid="uid://bgdvt0pi54166"]
+
+[ext_resource type="Script" path="res://data/player-state/player_state_primitive.gd" id="1_8cb35"]
+
+[resource]
+resource_name = "sleep"
+script = ExtResource("1_8cb35")
+value = 0
+max_value = 127
+description = "PC's sleepiness"

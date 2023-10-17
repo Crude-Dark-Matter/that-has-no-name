@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlayerAttributeMapping" load_steps=3 format=3 uid="uid://dj33ih53krt1i"]
+
+[ext_resource type="Resource" uid="uid://0umx70gcqrrq" path="res://data/player-state/primitives/movement.tres" id="1_akbko"]
+[ext_resource type="Script" path="res://data/player-state/player_attribute_mapping.gd" id="2_6jle5"]
+
+[resource]
+resource_name = "blue-movement"
+script = ExtResource("2_6jle5")
+primitive = ExtResource("1_akbko")
+weight = 0.7

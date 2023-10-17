@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlayerStatePrimitive" load_steps=2 format=3 uid="uid://dna5afu54dipu"]
+
+[ext_resource type="Script" path="res://data/player-state/player_state_primitive.gd" id="1_ka7bx"]
+
+[resource]
+resource_name = "cuteness"
+script = ExtResource("1_ka7bx")
+value = 0
+max_value = 127
+description = "PC's feeling of squee"

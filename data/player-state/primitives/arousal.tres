@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlayerStatePrimitive" load_steps=2 format=3 uid="uid://lxlc7ooppqbo"]
+
+[ext_resource type="Script" path="res://data/player-state/player_state_primitive.gd" id="1_pe4j0"]
+
+[resource]
+resource_name = "arousal"
+script = ExtResource("1_pe4j0")
+value = 0
+max_value = 127
+description = "PC's need for sexual intimacy"

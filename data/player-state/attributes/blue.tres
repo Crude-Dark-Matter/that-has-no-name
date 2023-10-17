@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="PlayerAttribute" load_steps=9 format=3 uid="uid://dl0l23qosxwsy"]
+
+[ext_resource type="Resource" uid="uid://dbhuxlp8vuvmu" path="res://data/player-state/mappings/blue/blue-challenge.tres" id="1_bgnm7"]
+[ext_resource type="Script" path="res://data/player-state/player_attribute.gd" id="1_r322g"]
+[ext_resource type="Resource" uid="uid://bo23qcu4me2bm" path="res://data/player-state/mappings/blue/blue-novelty.tres" id="2_fq8rr"]
+[ext_resource type="Resource" uid="uid://djd3y6q5ke3dk" path="res://data/player-state/mappings/blue/blue-certainty.tres" id="3_oug3e"]
+[ext_resource type="Resource" uid="uid://clmasskh2uudr" path="res://data/player-state/mappings/blue/blue-sleep.tres" id="4_p6jo4"]
+[ext_resource type="Resource" uid="uid://dj33ih53krt1i" path="res://data/player-state/mappings/blue/blue-movement.tres" id="5_4sg2j"]
+[ext_resource type="Resource" uid="uid://dbdss31e6yjqb" path="res://data/player-state/mappings/blue/blue-hunger.tres" id="6_ub54o"]
+[ext_resource type="Resource" uid="uid://dpsbl1mtd8rt7" path="res://data/player-state/mappings/blue/blue-purpose.tres" id="7_wwhet"]
+
+[resource]
+resource_name = "blue"
+script = ExtResource("1_r322g")
+value = 0.0
+primitives = Array[Resource("res://data/player-state/player_attribute_mapping.gd")]([ExtResource("1_bgnm7"), ExtResource("2_fq8rr"), ExtResource("3_oug3e"), ExtResource("4_p6jo4"), ExtResource("5_4sg2j"), ExtResource("6_ub54o"), ExtResource("7_wwhet")])

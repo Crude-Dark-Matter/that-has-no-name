@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlayerStatePrimitive" load_steps=2 format=3 uid="uid://sckr83q11vla"]
+
+[ext_resource type="Script" path="res://data/player-state/player_state_primitive.gd" id="1_nbsrp"]
+
+[resource]
+resource_name = "certainty"
+script = ExtResource("1_nbsrp")
+value = 14
+max_value = 127
+description = "PC's feeling of understanding"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PlayerAttributeMapping" load_steps=3 format=3 uid="uid://jq0tvomgoxhf"]
+
+[ext_resource type="Resource" uid="uid://b3kaaep32762k" path="res://data/player-state/primitives/disgust.tres" id="1_ov7aj"]
+[ext_resource type="Script" path="res://data/player-state/player_attribute_mapping.gd" id="2_csqmd"]
+
+[resource]
+script = ExtResource("2_csqmd")
+primitive = ExtResource("1_ov7aj")
+weight = -1.5
