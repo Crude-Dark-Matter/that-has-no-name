@@ -21,5 +21,5 @@ EventBus="*res://game-loop/event_bus.gd"
 
 [display]
 
-window/size/viewport_width=1440
-window/size/viewport_height=960
+window/size/viewport_width=1024
+window/size/viewport_height=768
