@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://beobmj8lsrtay"]
+
+[node name="InventoryModal" type="CanvasLayer"]
