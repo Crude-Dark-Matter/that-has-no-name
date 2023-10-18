@@ -5,8 +5,4 @@
 [resource]
 resource_name = "affection"
 script = ExtResource("1_y6kuk")
-value = 0
-max_value = 127
-overload_value = 0
-underload_value = 0
 description = "PC's need for physical intimacy"
