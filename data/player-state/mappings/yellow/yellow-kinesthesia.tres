@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PlayerAttributeMapping" load_steps=3 format=3 uid="uid://bvviaaags3p7j"]
+
+[ext_resource type="Resource" uid="uid://dpgls45mespyv" path="res://data/player-state/primitives/kinesthesia.tres" id="1_totss"]
+[ext_resource type="Script" path="res://data/player-state/player_attribute_mapping.gd" id="2_eg6r1"]
+
+[resource]
+script = ExtResource("2_eg6r1")
+primitive = ExtResource("1_totss")
+weight = -1.0

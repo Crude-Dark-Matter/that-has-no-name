@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlayerAttributeMapping" load_steps=3 format=3 uid="uid://dbdss31e6yjqb"]
+
+[ext_resource type="Resource" uid="uid://dtu7ifq7l5cvq" path="res://data/player-state/primitives/hunger.tres" id="1_c1mpb"]
+[ext_resource type="Script" path="res://data/player-state/player_attribute_mapping.gd" id="2_ryr6n"]
+
+[resource]
+resource_name = "blue-hunger"
+script = ExtResource("2_ryr6n")
+primitive = ExtResource("1_c1mpb")
+weight = -0.5

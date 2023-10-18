@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlayerStatePrimitive" load_steps=2 format=3 uid="uid://dtu7ifq7l5cvq"]
+
+[ext_resource type="Script" path="res://data/player-state/player_state_primitive.gd" id="1_i3ujf"]
+
+[resource]
+resource_name = "hunger"
+script = ExtResource("1_i3ujf")
+value = 0
+max_value = 127
+description = ""

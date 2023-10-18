@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlayerAttributeMapping" load_steps=3 format=3 uid="uid://bo23qcu4me2bm"]
+
+[ext_resource type="Resource" uid="uid://teub4w0p3kt2" path="res://data/player-state/primitives/novelty.tres" id="1_fns5b"]
+[ext_resource type="Script" path="res://data/player-state/player_attribute_mapping.gd" id="2_cl88i"]
+
+[resource]
+resource_name = "blue-novelty"
+script = ExtResource("2_cl88i")
+primitive = ExtResource("1_fns5b")
+weight = 2.0

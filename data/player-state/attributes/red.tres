@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PlayerAttribute" load_steps=9 format=3 uid="uid://w6msrg8vooxc"]
+
+[ext_resource type="Resource" uid="uid://dpgt534mpd1mc" path="res://data/player-state/mappings/red/red-hunger.tres" id="1_ec5rw"]
+[ext_resource type="Script" path="res://data/player-state/player_attribute.gd" id="1_gfnal"]
+[ext_resource type="Resource" uid="uid://ccul4p1e3s5yp" path="res://data/player-state/mappings/red/red-sleep.tres" id="2_3kyeu"]
+[ext_resource type="Resource" uid="uid://26gkck8wxqjg" path="res://data/player-state/mappings/red/red-fear.tres" id="3_k03h1"]
+[ext_resource type="Resource" uid="uid://c3xoegs7nsc3s" path="res://data/player-state/mappings/red/red-thirst.tres" id="4_h3c70"]
+[ext_resource type="Resource" uid="uid://b1a6s48euibhq" path="res://data/player-state/mappings/red/red-temperature.tres" id="5_lnm05"]
+[ext_resource type="Resource" uid="uid://ddv6yxmy6eado" path="res://data/player-state/mappings/red/red-arousal.tres" id="6_mhbq6"]
+[ext_resource type="Resource" uid="uid://ckagvfqk26fwi" path="res://data/player-state/mappings/red/red-purpose.tres" id="7_ttphk"]
+
+[resource]
+resource_name = "red"
+script = ExtResource("1_gfnal")
+primitives = Array[Resource("res://data/player-state/player_attribute_mapping.gd")]([ExtResource("1_ec5rw"), ExtResource("2_3kyeu"), ExtResource("3_k03h1"), ExtResource("4_h3c70"), ExtResource("5_lnm05"), ExtResource("6_mhbq6"), ExtResource("7_ttphk")])

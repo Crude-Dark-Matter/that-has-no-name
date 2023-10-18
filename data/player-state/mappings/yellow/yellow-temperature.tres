@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PlayerAttributeMapping" load_steps=3 format=3 uid="uid://qqfen4kyjur0"]
+
+[ext_resource type="Resource" uid="uid://cwfpnqqn7xknn" path="res://data/player-state/primitives/temperature.tres" id="1_67uic"]
+[ext_resource type="Script" path="res://data/player-state/player_attribute_mapping.gd" id="2_mhsyv"]
+
+[resource]
+script = ExtResource("2_mhsyv")
+primitive = ExtResource("1_67uic")
+weight = -0.8

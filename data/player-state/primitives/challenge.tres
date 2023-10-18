@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="PlayerStatePrimitive" load_steps=2 format=3 uid="uid://b5k7s4201ieey"]
+
+[ext_resource type="Script" path="res://data/player-state/player_state_primitive.gd" id="1_1jwcx"]
+
+[resource]
+resource_name = "challenge"
+script = ExtResource("1_1jwcx")
+description = "PC's sense of being at the limits of their skills"

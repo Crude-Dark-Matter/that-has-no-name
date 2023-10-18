@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PlayerAttribute" load_steps=9 format=3 uid="uid://c13hxket2wsgl"]
+
+[ext_resource type="Resource" uid="uid://c64ue70lkiwgq" path="res://data/player-state/mappings/orange/orange-light.tres" id="1_d17bi"]
+[ext_resource type="Resource" uid="uid://f5pn1j742vee" path="res://data/player-state/mappings/orange/orange-noise.tres" id="2_6l8bt"]
+[ext_resource type="Resource" uid="uid://bwt1gnnk48ewa" path="res://data/player-state/mappings/orange/orange-texture.tres" id="3_qxhr8"]
+[ext_resource type="Resource" uid="uid://cs2k3ais8qoxd" path="res://data/player-state/mappings/orange/orange-movement.tres" id="4_mfwvj"]
+[ext_resource type="Resource" uid="uid://c81br5pt5al6j" path="res://data/player-state/mappings/orange/orange-temperature.tres" id="5_dunb1"]
+[ext_resource type="Resource" uid="uid://ceaf1mogr62p8" path="res://data/player-state/mappings/orange/orange-kinesthesia.tres" id="6_vlttu"]
+[ext_resource type="Resource" uid="uid://c0d38t4tmiqtb" path="res://data/player-state/mappings/orange/orange-cuteness.tres" id="7_gsupa"]
+[ext_resource type="Script" path="res://data/player-state/player_attribute.gd" id="8_usjtt"]
+
+[resource]
+resource_name = "orange"
+script = ExtResource("8_usjtt")
+primitives = Array[Resource("res://data/player-state/player_attribute_mapping.gd")]([ExtResource("1_d17bi"), ExtResource("2_6l8bt"), ExtResource("3_qxhr8"), ExtResource("4_mfwvj"), ExtResource("5_dunb1"), ExtResource("6_vlttu"), ExtResource("7_gsupa")])

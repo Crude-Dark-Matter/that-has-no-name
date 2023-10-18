@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PlayerAttributeMapping" load_steps=3 format=3 uid="uid://kba3chm3h4id"]
+
+[ext_resource type="Resource" uid="uid://0umx70gcqrrq" path="res://data/player-state/primitives/movement.tres" id="1_pjt72"]
+[ext_resource type="Script" path="res://data/player-state/player_attribute_mapping.gd" id="2_bjedj"]
+
+[resource]
+script = ExtResource("2_bjedj")
+primitive = ExtResource("1_pjt72")
+weight = -0.8

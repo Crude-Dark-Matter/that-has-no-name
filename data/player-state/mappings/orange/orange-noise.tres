@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PlayerAttributeMapping" load_steps=3 format=3 uid="uid://f5pn1j742vee"]
+
+[ext_resource type="Resource" uid="uid://jbehmlhatjfv" path="res://data/player-state/primitives/noise.tres" id="1_te682"]
+[ext_resource type="Script" path="res://data/player-state/player_attribute_mapping.gd" id="2_6vvcq"]
+
+[resource]
+script = ExtResource("2_6vvcq")
+primitive = ExtResource("1_te682")
+weight = 2.0

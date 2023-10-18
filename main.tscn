@@ -1,0 +1,20 @@
+[gd_scene load_steps=8 format=3 uid="uid://d2cttsk33mur6"]
+
+[ext_resource type="Script" path="res://data/player_state.gd" id="1_p882y"]
+[ext_resource type="Resource" uid="uid://dl0l23qosxwsy" path="res://data/player-state/attributes/blue.tres" id="2_nympb"]
+[ext_resource type="Resource" uid="uid://b3w6gp8lu7q5c" path="res://data/player-state/attributes/green.tres" id="3_q6axf"]
+[ext_resource type="Resource" uid="uid://c13hxket2wsgl" path="res://data/player-state/attributes/orange.tres" id="4_73cex"]
+[ext_resource type="Resource" uid="uid://dtxkt0rdwb4f7" path="res://data/player-state/attributes/purple.tres" id="5_h14cv"]
+[ext_resource type="Resource" uid="uid://w6msrg8vooxc" path="res://data/player-state/attributes/red.tres" id="6_3y3fo"]
+[ext_resource type="Resource" uid="uid://c7cvy5acgi31m" path="res://data/player-state/attributes/yellow.tres" id="7_xxe4w"]
+
+[node name="Main" type="Node"]
+
+[node name="PlayerState" type="Node" parent="."]
+script = ExtResource("1_p882y")
+attributes = Array[Resource("res://data/player-state/player_attribute.gd")]([ExtResource("2_nympb"), ExtResource("3_q6axf"), ExtResource("4_73cex"), ExtResource("5_h14cv"), ExtResource("6_3y3fo"), ExtResource("7_xxe4w")])
+debug = true
+
+[node name="Container" type="VBoxContainer" parent="PlayerState"]
+offset_right = 333.0
+offset_bottom = 280.0

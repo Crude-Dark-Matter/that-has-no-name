@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="PlayerAttribute" load_steps=10 format=3 uid="uid://c7cvy5acgi31m"]
+
+[ext_resource type="Resource" uid="uid://co0kx6b288t6c" path="res://data/player-state/mappings/yellow/yellow-sleep.tres" id="1_hewg0"]
+[ext_resource type="Script" path="res://data/player-state/player_attribute.gd" id="1_pv4ag"]
+[ext_resource type="Resource" uid="uid://dnxqv1fmn63x4" path="res://data/player-state/mappings/yellow/yellow-fear.tres" id="2_aubdk"]
+[ext_resource type="Resource" uid="uid://bvviaaags3p7j" path="res://data/player-state/mappings/yellow/yellow-kinesthesia.tres" id="3_ofhg0"]
+[ext_resource type="Resource" uid="uid://qqfen4kyjur0" path="res://data/player-state/mappings/yellow/yellow-temperature.tres" id="4_ramdq"]
+[ext_resource type="Resource" uid="uid://kba3chm3h4id" path="res://data/player-state/mappings/yellow/yellow-movement.tres" id="5_54684"]
+[ext_resource type="Resource" uid="uid://bar4oj6xxja66" path="res://data/player-state/mappings/yellow/yellow-hunger.tres" id="6_n8iln"]
+[ext_resource type="Resource" uid="uid://dqlredfc5dhgy" path="res://data/player-state/mappings/yellow/yellow-texture.tres" id="7_shb5b"]
+[ext_resource type="Resource" uid="uid://4el725ppis7a" path="res://data/player-state/mappings/yellow/yellow-cuteness.tres" id="8_e7brr"]
+
+[resource]
+resource_name = "yellow"
+script = ExtResource("1_pv4ag")
+primitives = Array[Resource("res://data/player-state/player_attribute_mapping.gd")]([ExtResource("1_hewg0"), ExtResource("2_aubdk"), ExtResource("3_ofhg0"), ExtResource("4_ramdq"), ExtResource("5_54684"), ExtResource("6_n8iln"), ExtResource("7_shb5b"), ExtResource("8_e7brr")])

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PlayerAttributeMapping" load_steps=3 format=3 uid="uid://c64ue70lkiwgq"]
+
+[ext_resource type="Resource" uid="uid://chyuq1r6honun" path="res://data/player-state/primitives/light.tres" id="1_fxv5k"]
+[ext_resource type="Script" path="res://data/player-state/player_attribute_mapping.gd" id="2_lvvbb"]
+
+[resource]
+script = ExtResource("2_lvvbb")
+primitive = ExtResource("1_fxv5k")
+weight = 1.2

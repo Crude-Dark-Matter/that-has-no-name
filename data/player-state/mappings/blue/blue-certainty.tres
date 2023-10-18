@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlayerAttributeMapping" load_steps=3 format=3 uid="uid://djd3y6q5ke3dk"]
+
+[ext_resource type="Resource" uid="uid://sckr83q11vla" path="res://data/player-state/primitives/certainty.tres" id="1_ey1hu"]
+[ext_resource type="Script" path="res://data/player-state/player_attribute_mapping.gd" id="2_pc8ay"]
+
+[resource]
+resource_name = "blue-certainty"
+script = ExtResource("2_pc8ay")
+primitive = ExtResource("1_ey1hu")
+weight = -1.5

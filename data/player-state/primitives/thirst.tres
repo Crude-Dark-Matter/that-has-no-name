@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlayerStatePrimitive" load_steps=2 format=3 uid="uid://c7281qadoshe6"]
+
+[ext_resource type="Script" path="res://data/player-state/player_state_primitive.gd" id="1_x5p6n"]
+
+[resource]
+resource_name = "thirst"
+script = ExtResource("1_x5p6n")
+value = 0
+max_value = 127
+description = "PC's thirst"

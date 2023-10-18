@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="PlayerAttribute" load_steps=11 format=3 uid="uid://dtxkt0rdwb4f7"]
+
+[ext_resource type="Script" path="res://data/player-state/player_attribute.gd" id="1_860i1"]
+[ext_resource type="Resource" uid="uid://b5w6x1fmnosoc" path="res://data/player-state/mappings/purple/purple-arousal.tres" id="1_lqxpt"]
+[ext_resource type="Resource" uid="uid://ckkddvjwwvbsq" path="res://data/player-state/mappings/purple/purple-fear.tres" id="2_p7ijf"]
+[ext_resource type="Resource" uid="uid://xlq8i7hivxqj" path="res://data/player-state/mappings/purple/purple-hunger.tres" id="3_ivudk"]
+[ext_resource type="Resource" uid="uid://dy7f4b47pk66d" path="res://data/player-state/mappings/purple/purple-empathy.tres" id="4_mbsy1"]
+[ext_resource type="Resource" uid="uid://3og4f8nkgo4o" path="res://data/player-state/mappings/purple/purple-kinesthesia.tres" id="5_g2eg5"]
+[ext_resource type="Resource" uid="uid://dswn02ujvm51r" path="res://data/player-state/mappings/purple/purple-novelty.tres" id="6_bnm4a"]
+[ext_resource type="Resource" uid="uid://ctk8gvlii26gv" path="res://data/player-state/mappings/purple/purple-sleep.tres" id="7_cd6qo"]
+[ext_resource type="Resource" uid="uid://c6nknf6cawffd" path="res://data/player-state/mappings/purple/purple-disgust.tres" id="8_3cupx"]
+[ext_resource type="Resource" uid="uid://dby00ijd54fl2" path="res://data/player-state/mappings/purple/purple-affection.tres" id="9_4iv4b"]
+
+[resource]
+resource_name = "purple"
+script = ExtResource("1_860i1")
+primitives = Array[Resource("res://data/player-state/player_attribute_mapping.gd")]([ExtResource("1_lqxpt"), ExtResource("2_p7ijf"), ExtResource("3_ivudk"), ExtResource("4_mbsy1"), ExtResource("5_g2eg5"), ExtResource("6_bnm4a"), ExtResource("7_cd6qo"), ExtResource("8_3cupx"), ExtResource("9_4iv4b")])

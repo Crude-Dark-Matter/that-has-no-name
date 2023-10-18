@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PlayerAttributeMapping" load_steps=3 format=3 uid="uid://d2khxfl7i5m3s"]
+
+[ext_resource type="Resource" uid="uid://djvbcp5nqqsh6" path="res://data/player-state/primitives/empathy.tres" id="1_m56wj"]
+[ext_resource type="Script" path="res://data/player-state/player_attribute_mapping.gd" id="2_mj7kx"]
+
+[resource]
+script = ExtResource("2_mj7kx")
+primitive = ExtResource("1_m56wj")
+weight = 1.5

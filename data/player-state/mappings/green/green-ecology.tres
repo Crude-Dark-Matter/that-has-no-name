@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PlayerAttributeMapping" load_steps=3 format=3 uid="uid://dsr37vy14l2kj"]
+
+[ext_resource type="Resource" uid="uid://cd3asxpbnno2o" path="res://data/player-state/primitives/ecology.tres" id="1_3t5rf"]
+[ext_resource type="Script" path="res://data/player-state/player_attribute_mapping.gd" id="2_4co66"]
+
+[resource]
+script = ExtResource("2_4co66")
+primitive = ExtResource("1_3t5rf")
+weight = 1.2

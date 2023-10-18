@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlayerAttributeMapping" load_steps=3 format=3 uid="uid://dbhuxlp8vuvmu"]
+
+[ext_resource type="Resource" uid="uid://b5k7s4201ieey" path="res://data/player-state/primitives/challenge.tres" id="1_faxhr"]
+[ext_resource type="Script" path="res://data/player-state/player_attribute_mapping.gd" id="2_ejf5h"]
+
+[resource]
+resource_name = "blue-challenge"
+script = ExtResource("2_ejf5h")
+primitive = ExtResource("1_faxhr")
+weight = 1.5

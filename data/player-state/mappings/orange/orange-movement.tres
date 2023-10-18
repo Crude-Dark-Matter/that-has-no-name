@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PlayerAttributeMapping" load_steps=3 format=3 uid="uid://cs2k3ais8qoxd"]
+
+[ext_resource type="Resource" uid="uid://0umx70gcqrrq" path="res://data/player-state/primitives/movement.tres" id="1_sx88s"]
+[ext_resource type="Script" path="res://data/player-state/player_attribute_mapping.gd" id="2_s04ui"]
+
+[resource]
+script = ExtResource("2_s04ui")
+primitive = ExtResource("1_sx88s")
+weight = -0.7

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PlayerAttributeMapping" load_steps=3 format=3 uid="uid://8hp4a56aelbe"]
+
+[ext_resource type="Resource" uid="uid://bbt2qk5iej5v2" path="res://data/player-state/primitives/purpose.tres" id="1_e1unl"]
+[ext_resource type="Script" path="res://data/player-state/player_attribute_mapping.gd" id="2_qcagr"]
+
+[resource]
+script = ExtResource("2_qcagr")
+primitive = ExtResource("1_e1unl")
+weight = 1.7
