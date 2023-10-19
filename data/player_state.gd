@@ -107,7 +107,7 @@ var _add_primitive_visualizations = func(debug_container, prims) -> void:
 		dec_button.text = "-"
 		inc_button.text = "+"
 		
-		dec_button.pressed.connect(func(): \
+		dec_button.pressed.connect(func(): 
 			_event_bus.emit_signal("change_%s" % prim_name, -1))
 		inc_button.pressed.connect(func(): \
 			_event_bus.emit_signal("change_%s" % prim_name, 1))
