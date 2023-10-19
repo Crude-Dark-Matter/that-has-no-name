@@ -35,12 +35,12 @@ func _init() -> void:
 
 func connect_to_bus(bus: EventBus) -> void:
 	_event_bus = bus
-	_event_bus.add_user_signal(_changed_signal, [
+	_event_bus.attach_signal(_changed_signal, [
 		{ "name": "new_value", "type": TYPE_INT},
 		{ "name": "mutate_value", "type": TYPE_INT}])
-	_event_bus.add_user_signal(_overloaded_signal)
-	_event_bus.add_user_signal(_underloaded_signal)
-	_event_bus.add_user_signal(_on_change_signal, [
+	_event_bus.attach_signal(_overloaded_signal)
+	_event_bus.attach_signal(_underloaded_signal)
+	_event_bus.attach_signal(_on_change_signal, [
 		{ "name": "mutate_value", "type": TYPE_INT}])
 	_event_bus.connect(_on_change_signal, _on_changed)
 
