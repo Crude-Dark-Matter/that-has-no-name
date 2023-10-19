@@ -38,18 +38,18 @@ func connect_to_bus(e : EventBus) -> void:
 			func(_new_value, mutate_value): 
 				_on_prim_changed(weight).call(mutate_value))
 		
-		_event_bus.add_user_signal(_changed_signal, [
-			{ "name": "new_value", "type": TYPE_INT}])
-		
-		_event_bus.add_user_signal(_overloaded_signal)
-		_event_bus.add_user_signal(_underloaded_signal)
-		
 		# max value is constrained by max value of composed primitives
 		max_value += abs(weight * prim.max_value)
 	# these defaults will be reset by seed values
 	value = max_value / 2
 	overload_value = max_value * .66
 	underload_value = max_value * .33
+
+	_event_bus.attach_signal(_changed_signal, [
+		{ "name": "new_value", "type": TYPE_INT}])
+	
+	_event_bus.attach_signal(_overloaded_signal)
+	_event_bus.attach_signal(_underloaded_signal)
 
 # needs to return a closure to keep abstracted for each mapping
 func _on_prim_changed(weight: float) -> Callable:
@@ -58,7 +58,7 @@ func _on_prim_changed(weight: float) -> Callable:
 		# weighted summation of primitive values determines attr value
 		# these checks shouldn't really be needed
 		var new_val = value + (prim_mutate_value * weight)
-		print(new_val)
+		
 		if (new_val >= max_value):
 			value = max_value
 			attr_mutate_value = new_val - value

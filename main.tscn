@@ -1,7 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://d2cttsk33mur6"]
 
+[ext_resource type="Script" path="res://main.gd" id="1_eyiy7"]
 [ext_resource type="Script" path="res://data/player_state.gd" id="1_p882y"]
 [ext_resource type="Resource" uid="uid://dl0l23qosxwsy" path="res://data/player-state/attributes/blue.tres" id="2_nympb"]
+[ext_resource type="Resource" uid="uid://c2444ytdwvqgu" path="res://data/global_log.tres" id="2_t2qxn"]
 [ext_resource type="Resource" uid="uid://b3w6gp8lu7q5c" path="res://data/player-state/attributes/green.tres" id="3_q6axf"]
 [ext_resource type="Resource" uid="uid://c13hxket2wsgl" path="res://data/player-state/attributes/orange.tres" id="4_73cex"]
 [ext_resource type="Resource" uid="uid://dtxkt0rdwb4f7" path="res://data/player-state/attributes/purple.tres" id="5_h14cv"]
@@ -11,6 +13,8 @@
 [ext_resource type="Script" path="res://data/character_state.gd" id="9_07y0x"]
 
 [node name="Main" type="Node"]
+script = ExtResource("1_eyiy7")
+log = ExtResource("2_t2qxn")
 
 [node name="PlayerState" type="Node" parent="."]
 script = ExtResource("1_p882y")

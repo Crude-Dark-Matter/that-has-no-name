@@ -8,7 +8,7 @@ var _event_bus : EventBus
 func _ready() -> void:
 	_event_bus = get_node("/root/EventBus")
 	primitives = _load_primitives.call()
-	
+	print("player_state_ready")
 	for prim in primitives:
 		prim._init()
 		prim.connect_to_bus(_event_bus)
@@ -46,7 +46,7 @@ var _show = func() -> void:
 
 ## HELPERS
 var _load_primitives = func() -> Array[PlayerStatePrimitive]:
-	var prims : Array[PlayerStatePrimitive]
+	var prims : Array[PlayerStatePrimitive] = []
 	var prim_dir = "res://data/player-state/primitives"
 	var prim_handles = DirAccess.get_files_at(prim_dir)
 	for handle in prim_handles:
