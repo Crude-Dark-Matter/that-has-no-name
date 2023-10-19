@@ -1,0 +1,21 @@
+{
+  "type": "big-house",
+  "interactions": [
+    {
+      "id": 0,
+      "name": "game-start",
+      "children": [ 
+        { 
+          "type": "big-house",
+          "id": 0,
+          "conditions": []
+        } 
+        ],
+      "parent": [],
+      "siblings": [],
+      "event": {
+        "seed": "GAME.SEED"
+      }
+    }
+  ]
+}
