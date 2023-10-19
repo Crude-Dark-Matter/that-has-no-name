@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d2cttsk33mur6"]
+[gd_scene load_steps=10 format=3 uid="uid://d2cttsk33mur6"]
 
 [ext_resource type="Script" path="res://data/player_state.gd" id="1_p882y"]
 [ext_resource type="Resource" uid="uid://dl0l23qosxwsy" path="res://data/player-state/attributes/blue.tres" id="2_nympb"]
@@ -7,6 +7,8 @@
 [ext_resource type="Resource" uid="uid://dtxkt0rdwb4f7" path="res://data/player-state/attributes/purple.tres" id="5_h14cv"]
 [ext_resource type="Resource" uid="uid://w6msrg8vooxc" path="res://data/player-state/attributes/red.tres" id="6_3y3fo"]
 [ext_resource type="Resource" uid="uid://c7cvy5acgi31m" path="res://data/player-state/attributes/yellow.tres" id="7_xxe4w"]
+[ext_resource type="PackedScene" uid="uid://brhcqgf3wnbra" path="res://scenes/exterior.tscn" id="8_46kta"]
+[ext_resource type="Script" path="res://data/character_state.gd" id="9_07y0x"]
 
 [node name="Main" type="Node"]
 
@@ -18,3 +20,10 @@ debug = true
 [node name="Container" type="VBoxContainer" parent="PlayerState"]
 offset_right = 333.0
 offset_bottom = 280.0
+
+[node name="InteractionWindow" parent="." instance=ExtResource("8_46kta")]
+
+[node name="WorldState" type="Node" parent="."]
+
+[node name="CharacterState" type="Node" parent="."]
+script = ExtResource("9_07y0x")

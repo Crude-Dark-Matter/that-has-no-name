@@ -1,0 +1,90 @@
+GAME BEGINS
+
+Your eyes open.
+
+The light on the ceiling is pink with dawn.
+
+WHO ARE YOU TODAY?
+() > text-prompt (sets player "i-am")
+
+There is an orange tabby pawing at your face.
+
+WHAT TO DO?
+() > pet cat (cute++)
+() > roll over (back to sleep, advance time, annoy char_1<>)
+() > get up and feed cat (disgust++, )
+
+[pet cat]
+[/pet cat]
+
+[get up and feed cat]
+You unscrew the plastic bin at the base of your bed and scoop out a mix of smoked fish bits and dehydrated squirrel. Homemade cat food. The smell is 
+
+``|*_*|´´ [bzzt sound]
+
+WHAT WAS THE CAT'S NAME AGAIN?
+() > fixed-length text-prompt (sets <cat_1> name)
+
+You : "Who's my favorite excuse to get up in the morning?"
+
+You : "Is it <cat_1>?"
+
+<cat_1> : "crunch, crunch, crunch"
+
+WHAT TO DO?
+() > annoy <cat_1> while they eat ()
+() > look on lovingly ()
+() > get dressed ()
+
+You're supposed to help clear out the greenhouse today.
+
+HOW WILL YOU DRESS?
+() > text-prompt (sets player presentation)
+
+There is a knock. You turn away from [<cat_1>/your closet] and take the few steps to your bedroom door.
+
+It's <char_1>.
+
+<CHAR_1> CONVO
+
+<char_1> : Hey Alex, I know you didn't sign up for early chores today, but...
+
+(if empathy is high) <char_1> is sweating.
+
+<char_1> : char_2 heard something on the ham.
+
+<char_1> : they want to push the meeting to this morning.
+
+WHAT TO SAY?
+() > Did they say what they heard?
+() > Actually, I'm going by the name (sets player name?)
+() > 
+
+char_1<>: Oh shit! I didn't realize! 
+
+char_1<>: I like it. It suits you.
+
+[passable]
+() > No problem
+() > Thanks
+[/passable]
+
+char_1<>: Sorry I haven't really been checking in with you lately. I haven't really felt comfortable in the big house lately.
+
+(if ) <char_1> looks startled back to attention
+
+[passable]
+(if blue) > Did char_2 say what they heard?
+
+
+[/passable]
+
+(if <char_1> feels comfortable towards you) char_1<>: So uh? Any chance you could help me make breakfast?
+
+() > 
+() > 
+() > 
+
+
+[roll over]
+[/roll over]
