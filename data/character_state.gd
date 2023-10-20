@@ -1,11 +1,12 @@
+class_name CharacterState extends Node
 # Holds state of all NPCs
-extends Node
 
 @export var characters : Array[NPC]
 var _event_bus : EventBus
 
 func _ready() -> void :
 	_event_bus = get_node("/root/EventBus")
-	for char in characters:
-		char._init()
-		char.connect_to_bus(_event_bus)
+	for npc in characters:
+		npc._init()
+		npc.connect_to_bus(_event_bus)
+	_event_bus.emit_signal("character_state_loaded")

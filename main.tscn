@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://d2cttsk33mur6"]
+[gd_scene load_steps=19 format=3 uid="uid://d2cttsk33mur6"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_eyiy7"]
 [ext_resource type="Script" path="res://data/player_state.gd" id="1_p882y"]
@@ -9,6 +9,7 @@
 [ext_resource type="Resource" uid="uid://w6msrg8vooxc" path="res://data/player-state/attributes/red.tres" id="6_3y3fo"]
 [ext_resource type="Resource" uid="uid://c7cvy5acgi31m" path="res://data/player-state/attributes/yellow.tres" id="7_xxe4w"]
 [ext_resource type="Script" path="res://data/character_state.gd" id="9_07y0x"]
+[ext_resource type="Script" path="res://data/world_state.gd" id="9_maefn"]
 [ext_resource type="Resource" uid="uid://btognuhvtkgy4" path="res://data/character-state/char_1.tres" id="10_fuk8l"]
 [ext_resource type="Resource" uid="uid://dl8syapmb6c8w" path="res://data/character-state/char_2.tres" id="11_eihw8"]
 [ext_resource type="Resource" uid="uid://d0iuqren3lcws" path="res://data/character-state/char_3.tres" id="12_ld2fq"]
@@ -31,6 +32,7 @@ offset_right = 333.0
 offset_bottom = 280.0
 
 [node name="WorldState" type="Node" parent="."]
+script = ExtResource("9_maefn")
 
 [node name="CharacterState" type="Node" parent="."]
 script = ExtResource("9_07y0x")

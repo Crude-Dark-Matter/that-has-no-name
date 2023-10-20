@@ -1,3 +1,4 @@
+class_name PlayerState 
 extends Node
 
 @export var attributes: Array[PlayerAttribute]
@@ -18,6 +19,7 @@ func _ready() -> void:
 		attribute.connect_to_bus(_event_bus)
 	if debug:
 		_show.call()
+	_event_bus.emit_signal("player_state_loaded")
 
 # called to seed intial player state
 # not yet implemented
