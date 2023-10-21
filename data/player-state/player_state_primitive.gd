@@ -33,6 +33,25 @@ func _init() -> void:
 	underload_value = 26
 	value = 64
 
+
+func name() -> String:
+	return resource_name
+
+
+# API for StateQuery to request state of primitive
+func request(sub_path_arr: Array[String]) -> Variant:
+	var key = sub_path_arr[0]
+	match key:
+		"value":
+			return value
+		"overloaded":
+			return value >= overload_value
+		"underloaded":
+			return value <= underload_value
+		_:
+			return
+
+
 func connect_to_bus(bus: EventBus) -> void:
 	_event_bus = bus
 	_event_bus.attach_signal(_changed_signal, [
@@ -43,6 +62,7 @@ func connect_to_bus(bus: EventBus) -> void:
 	_event_bus.attach_signal(_on_change_signal, [
 		{ "name": "mutate_value", "type": TYPE_INT}])
 	_event_bus.connect(_on_change_signal, _on_changed)
+
 
 func _on_changed(mutate_value: int) -> void:
 	# first determine whether value will change at all from previous

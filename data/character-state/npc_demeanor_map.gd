@@ -27,6 +27,32 @@ func connect_to_bus(npc: String, e: EventBus) -> void :
 	_connect.call("char_7")
 	_connect.call("char_8")
 
+
+# API for StateQuery to request state of NPC demeanor
+func request(key: String) -> Variant:
+	match key:
+		"player":
+			return player
+		"char_1":
+			return char_1
+		"char_2":
+			return char_2
+		"char_3":
+			return char_3
+		"char_4":
+			return char_4
+		"char_5":
+			return char_5
+		"char_6":
+			return char_6
+		"char_7":
+			return char_7
+		"char_8":
+			return char_8
+		_:
+			return
+
+
 var _connect = func(other_char: String) -> void :
 	_event_bus.attach_signal("%s_demeanor_toward_%s_changed" \
 			% [_npc, other_char], [

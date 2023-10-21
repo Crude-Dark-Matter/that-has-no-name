@@ -22,6 +22,25 @@ func connect_to_bus(npc: String, e: EventBus) -> void :
 	_connect.call("red")
 
 
+# API for StateQuery to request state of NPC attribute
+func request(key: String) -> Variant:
+	match key:
+		"purple":
+			return purple
+		"blue":
+			return blue
+		"green":
+			return green
+		"yellow":
+			return yellow
+		"orange":
+			return orange
+		"red":
+			return red
+		_:
+			return
+
+
 var _connect = func(att: String) -> void:
 	_event_bus.attach_signal("%s_%s_changed" % [_npc, att], [
 		{ "name": "new_value", "type": TYPE_INT }
