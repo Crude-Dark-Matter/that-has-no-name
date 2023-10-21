@@ -1,7 +1,0 @@
-[gd_resource type="Resource" script_class="GlobalLog" load_steps=2 format=3 uid="uid://c2444ytdwvqgu"]
-
-[ext_resource type="Script" path="res://data/global_log.gd" id="1_2r276"]
-
-[resource]
-script = ExtResource("1_2r276")
-stream = []

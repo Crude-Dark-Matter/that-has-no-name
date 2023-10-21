@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="NPC" load_steps=6 format=3 uid="uid://dl8syapmb6c8w"]
+
+[ext_resource type="Script" path="res://data/character-state/npc_attribute_map.gd" id="1_b8ing"]
+[ext_resource type="Script" path="res://data/character-state/npc_demeanor_map.gd" id="2_w15sk"]
+[ext_resource type="Script" path="res://data/character-state/npc.gd" id="3_u62w1"]
+
+[sub_resource type="Resource" id="Resource_4pmkw"]
+script = ExtResource("1_b8ing")
+purple = null
+blue = null
+green = null
+yellow = null
+orange = null
+red = null
+
+[sub_resource type="Resource" id="Resource_t53hh"]
+script = ExtResource("2_w15sk")
+player = null
+char_1 = null
+char_2 = null
+char_3 = null
+char_4 = null
+char_5 = null
+char_6 = null
+char_7 = null
+char_8 = null
+
+[resource]
+resource_name = "char_2"
+script = ExtResource("3_u62w1")
+name = "char_2"
+description = "people pleaser, low energy, audhd, self harm"
+pronouns = 3
+attributes = SubResource("Resource_4pmkw")
+demeanors = SubResource("Resource_t53hh")

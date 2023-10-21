@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="NPC" load_steps=6 format=3 uid="uid://d0iuqren3lcws"]
+
+[ext_resource type="Script" path="res://data/character-state/npc_attribute_map.gd" id="1_ud5e6"]
+[ext_resource type="Script" path="res://data/character-state/npc_demeanor_map.gd" id="2_5feio"]
+[ext_resource type="Script" path="res://data/character-state/npc.gd" id="3_chdt0"]
+
+[sub_resource type="Resource" id="Resource_i0h5n"]
+script = ExtResource("1_ud5e6")
+purple = null
+blue = null
+green = null
+yellow = null
+orange = null
+red = null
+
+[sub_resource type="Resource" id="Resource_m0str"]
+script = ExtResource("2_5feio")
+player = null
+char_1 = null
+char_2 = null
+char_3 = null
+char_4 = null
+char_5 = null
+char_6 = null
+char_7 = null
+char_8 = null
+
+[resource]
+resource_name = "char_3"
+script = ExtResource("3_chdt0")
+name = "char_3"
+description = "impatient, adhd, memory problems, stress migraines, self-sabotage"
+pronouns = 2
+attributes = SubResource("Resource_i0h5n")
+demeanors = SubResource("Resource_m0str")

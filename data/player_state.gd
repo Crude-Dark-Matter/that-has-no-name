@@ -1,31 +1,38 @@
+class_name PlayerState 
 extends Node
 
 @export var attributes: Array[PlayerAttribute]
-var primitives: Array[PlayerStatePrimitive] = []
+var _primitives: Array[PlayerStatePrimitive] = []
 @export var debug: bool
 var _event_bus : EventBus
+var _lookup_table: Dictionary
 
 func _ready() -> void:
 	_event_bus = get_node("/root/EventBus")
-	primitives = _load_primitives.call()
-	print("player_state_ready")
-	for prim in primitives:
+	_primitives = _load_primitives.call()
+	for prim in _primitives:
 		prim._init()
 		prim.connect_to_bus(_event_bus)
+		_lookup_table[prim.name()] = prim
 
 	for attribute in attributes:
 		attribute._init()
 		attribute.connect_to_bus(_event_bus)
+		_lookup_table[attribute.name()] = attribute
 	if debug:
 		_show.call()
+	_event_bus.player_state_readied.emit()
 
-# called to seed intial player state
-# not yet implemented
-func seed(prim_values : Dictionary) -> void:
-	pass
 
-func _process(_delta) -> void:
-	pass
+# request is used for querying state of any character
+# sub_path_arr contains keys for each sub-object
+# ending in a key for the final value
+func request(sub_path_arr: Array[String]) -> Variant:
+	var key = sub_path_arr[0]
+	var obj = _lookup_table.get(key)
+	if obj:
+		return obj.request(sub_path_arr.slice(1))
+	else: return
 
 var _show = func() -> void:
 	# never show internals in game build
@@ -42,7 +49,8 @@ var _show = func() -> void:
 	label.text = "Primitives"
 	debug_container.add_child(label)
 
-	_add_primitive_visualizations.call(debug_container, primitives)
+	_add_primitive_visualizations.call(debug_container, _primitives)
+
 
 ## HELPERS
 var _load_primitives = func() -> Array[PlayerStatePrimitive]:
@@ -107,7 +115,7 @@ var _add_primitive_visualizations = func(debug_container, prims) -> void:
 		dec_button.text = "-"
 		inc_button.text = "+"
 		
-		dec_button.pressed.connect(func(): \
+		dec_button.pressed.connect(func(): 
 			_event_bus.emit_signal("change_%s" % prim_name, -1))
 		inc_button.pressed.connect(func(): \
 			_event_bus.emit_signal("change_%s" % prim_name, 1))

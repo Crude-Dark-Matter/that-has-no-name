@@ -19,11 +19,30 @@ signal attribute_changed(val : float)
 signal overloaded()
 signal underloaded()
 
+
 func _init() -> void:
 	max_value = 0
 	value = 0
 	overload_value = 0
 	underload_value = 0
+
+func name() -> String:
+	return resource_name
+
+
+# API for StateQuery to request state of attribute
+func request(sub_path_arr: Array[String]) -> Variant:
+	var key = sub_path_arr[0]
+	match key:
+		"value":
+			return value
+		"overloaded":
+			return value >= overload_value
+		"underloaded":
+			return value <= underload_value
+		_:
+			return
+
 
 func connect_to_bus(e : EventBus) -> void:
 	_event_bus = e

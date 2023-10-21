@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="NPC" load_steps=6 format=3 uid="uid://cdso7mpkid462"]
+
+[ext_resource type="Script" path="res://data/character-state/npc_attribute_map.gd" id="1_qsrun"]
+[ext_resource type="Script" path="res://data/character-state/npc_demeanor_map.gd" id="2_yoe04"]
+[ext_resource type="Script" path="res://data/character-state/npc.gd" id="3_tmbdc"]
+
+[sub_resource type="Resource" id="Resource_amhcn"]
+script = ExtResource("1_qsrun")
+purple = null
+blue = null
+green = null
+yellow = null
+orange = null
+red = null
+
+[sub_resource type="Resource" id="Resource_js558"]
+script = ExtResource("2_yoe04")
+player = null
+char_1 = null
+char_2 = null
+char_3 = null
+char_4 = null
+char_5 = null
+char_6 = null
+char_7 = null
+char_8 = null
+
+[resource]
+resource_name = "char_5"
+script = ExtResource("3_tmbdc")
+name = "char_5"
+description = "token straight boy"
+pronouns = 2
+attributes = SubResource("Resource_amhcn")
+demeanors = SubResource("Resource_js558")

@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="NPC" load_steps=6 format=3 uid="uid://cl7ctxdolrekt"]
+
+[ext_resource type="Script" path="res://data/character-state/npc_attribute_map.gd" id="1_xt4ox"]
+[ext_resource type="Script" path="res://data/character-state/npc_demeanor_map.gd" id="2_ohbw0"]
+[ext_resource type="Script" path="res://data/character-state/npc.gd" id="3_3ygrg"]
+
+[sub_resource type="Resource" id="Resource_illve"]
+script = ExtResource("1_xt4ox")
+purple = null
+blue = null
+green = null
+yellow = null
+orange = null
+red = null
+
+[sub_resource type="Resource" id="Resource_44rdd"]
+script = ExtResource("2_ohbw0")
+player = null
+char_1 = null
+char_2 = null
+char_3 = null
+char_4 = null
+char_5 = null
+char_6 = null
+char_7 = null
+char_8 = null
+
+[resource]
+resource_name = "char_6"
+script = ExtResource("3_3ygrg")
+name = "char_6"
+description = "militant, terrified"
+pronouns = 4
+attributes = SubResource("Resource_illve")
+demeanors = SubResource("Resource_44rdd")
