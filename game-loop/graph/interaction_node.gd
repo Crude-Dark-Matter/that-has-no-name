@@ -25,6 +25,11 @@ func _init(name : String, id: String, i_type: input_type, \
 	_edges = edges
 	_events = events
 
+func get_edge_ids() -> Array[String]:
+	return _edges
+
+func get_id() -> String:
+	return _id
 
 ## Factory to create the appropriately subtyped InteractionNode
 static func create(name: String, id: String, i_type: input_type, \
@@ -42,21 +47,9 @@ static func create(name: String, id: String, i_type: input_type, \
 			return SimpleInteractionNode.new(name, id, i_type, edges, events)
 
 
-## SUBTYPES
-## --------
-class SimpleInteractionNode extends InteractionNode:
-	func _init(name : String, id: String, i_type: input_type,
-			edges: Array[String], events: Array[GameEvent]) -> void:
-		super(name, id, i_type, edges, events)
-
-
-class InterruptInteractionNode extends InteractionNode:
-	func _init(name : String, id: String, i_type: input_type, \
-			edges: Array[String], events: Array[GameEvent]) -> void:
-		super(name, id, i_type, edges, events)
-
-
-class ThunkInteractionNode extends InteractionNode:
-	func _init(name : String, id: String, i_type: input_type, \
-			edges: Array[String], events: Array[GameEvent]) -> void:
-		super(name, id, i_type, edges, events)
+# closure used to produce a Callable that can be passed to Array.reduce
+# to find a node of a given id from an Array of nodes
+static func find_node_by_id(id: String) -> Callable:
+	return func(_acc, node_to_test):
+		if node_to_test._id == id:
+			return node_to_test
