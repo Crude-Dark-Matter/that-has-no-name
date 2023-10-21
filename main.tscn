@@ -18,6 +18,7 @@
 [ext_resource type="Resource" uid="uid://cl7ctxdolrekt" path="res://data/character-state/char_6.tres" id="15_osrub"]
 [ext_resource type="Resource" uid="uid://dfcqfll4bmslg" path="res://data/character-state/char_7.tres" id="16_xp8mu"]
 [ext_resource type="Resource" uid="uid://s5sso87ojuec" path="res://data/character-state/char_8.tres" id="17_fcx7t"]
+[ext_resource type="PackedScene" uid="uid://brhcqgf3wnbra" path="res://scenes/exterior.tscn" id="8_46kta"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_eyiy7")
