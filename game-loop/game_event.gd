@@ -1,13 +1,17 @@
-class_name GameEvent extends Object
+class_name GameEvent 
+extends Object
+# represents a single game state mutation packaged within a Command
 
 # used dictionary instead of enum to make more readable
 const operation = {
 	"SET": "set", 
-	"CHANGE": "change", 
+	"CHANGE": "change",
+	"PUSH": "push"
 	}
 const operation_past = {
 	"SET": "set", 
 	"CHANGE": "changed",
+	"PUSH": "pushed"
 }
 
 var _id : String
@@ -21,6 +25,7 @@ func _init(id: String, key_path: String, op: String, value: Variant) -> void:
 	_id = id
 	_key_path = key_path.replace(".", "_")
 	_operation = op
+	_value = value
 
 
 func get_id() -> String:

@@ -1,4 +1,7 @@
-class_name Command extends Object
+class_name Command
+extends Object
+# represents a single package of game events, usually player initiated, but
+# can be triggered by changes in game state.
 
 enum type {SIMPLE, INTERRUPT, THUNK, COMPOSED}
 
@@ -34,22 +37,26 @@ func get_events() -> Array[GameEvent]:
 	return _events
 
 
+# "casts" any CommandEdge to a Command preserving its sub-type in
+# the Command domain.
+# also creates a PUSH-FLAVOR-TEXT event from CommandEdge _flavor_text
 static func from_edge(edge: CommandEdge, composed = false) -> Command:
 	var name = edge._name
 	var id = edge._id
 	var node_id = edge._node
+	var cmd
+	var flavor_text_event = GameEvent.new("PUSH-FLAVOR-TEXT", \
+			"ui.flavor_text", "PUSH", edge._flavor_text)
 	if edge is SimpleCommandEdge:
-		# Edges are not typed COMPOSED, SIMPLE edges yield composed
-		# commands when following THUNK nodes
-		if composed == true:
-			return create(name, id, node_id, type.COMPOSED)
-		return create(name, id, node_id, type.SIMPLE)
-	elif edge is InterruptCommandEdge:
-		return create(name, id, node_id, type.INTERRUPT)
+		cmd = create(name, id, node_id, type.SIMPLE)
+	elif edge is ComposedCommandEdge:
+		cmd = create(name, id, node_id, type.COMPOSED)
 	elif edge is ThunkCommandEdge:
-		return create(name, id, node_id, type.THUNK)
+		cmd = create(name, id, node_id, type.THUNK)
 	else:
-		return create(name, id, node_id, type.SIMPLE)
+		cmd = create(name, id, node_id, type.SIMPLE)
+	cmd._events.append(flavor_text_event)
+	return cmd
 
 
 func add_events_from_node(node: InteractionNode):

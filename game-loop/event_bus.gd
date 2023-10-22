@@ -15,15 +15,20 @@ extends Node
 # InteractionContext is agnostic to the sub-graph a node or edge
 # comes from. GraphLoader fills in needed "EXIT" CommandEdge and
 # other super/sub-graph CommandEdge's.
-signal request_command_edge(edge_id: String)
-signal command_edge_returned(edge: CommandEdge)
-signal request_interaction_node(node_id: String)
-signal interaction_node_returned(node: InteractionNode)
+# GraphLoader must guarantee that any Interrupt is first in list
+# and any Thunk is last in list. there can be no more than 1 of 
+# either in any portion of the graph
+signal request_command_edges(edge_id: Array[String])
+signal command_edges_returned(edge: Array[CommandEdge])
+signal request_interaction_nodes(node_id: Array[String])
+signal interaction_nodes_returned(node: Array[InteractionNode])
 # "commands_approved" is emitted when all nodes and edges of been
 # returned following setting a new _current_node, approval
 # of each edge has been determined and each approved edge has been
 # "cast" to a Command with the Events appended from the destination node
 signal commands_approved(commands: Array[Command])
+# interrupts can be queued out of order
+signal queue_interrupt_command(command: Command)
 # ------------------
 # PlayerCommandInput
 # ------------------

@@ -2,7 +2,7 @@ class_name CommandEdge
 extends Object
 # represents an edge in any graph before being composed into a Command
 
-enum type {SIMPLE, INTERRUPT, THUNK}
+enum type {SIMPLE, INTERRUPT, THUNK, COMPOSED}
 
 var _name : String
 # all id's are of format e.GRAPH.UNIQUE_INT
@@ -40,9 +40,17 @@ static func create(_type: type, name: String, id: String, \
 		type.THUNK:
 			return ThunkCommandEdge.new(name, id, \
 					flavor_text, node, conditions)
+		type.COMPOSED:
+			return ComposedCommandEdge.new(name, id, \
+					flavor_text, node, conditions)
 		_:
 			return SimpleCommandEdge.new(name, id, \
 					flavor_text, node, conditions)
+
+
+static func to_composed_edge(edge: SimpleCommandEdge) -> ComposedCommandEdge:
+	return create(type.COMPOSED, edge._name, edge._id, edge._flavor_text,\
+			edge._node, edge._conditions)
 
 
 func get_id() -> String:
