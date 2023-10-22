@@ -5,7 +5,7 @@ Your eyes open.
 The light on the ceiling is pink with dawn.
 
 WHO ARE YOU TODAY?
-() > text-prompt (sets player "i-am")
+() > PROMPT-I-AM (sets player "i-am")
 
 There is an orange tabby pawing at your face.
 

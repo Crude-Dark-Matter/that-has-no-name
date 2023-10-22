@@ -39,7 +39,7 @@ var _show = func() -> void:
 	if !OS.is_debug_build:
 		return
 	
-	var debug_container = get_child(0)
+	var debug_container = get_child(0).get_child(0)
 	debug_container.size = Vector2(100,1000)
 
 	_add_attribute_visualizations.call(debug_container, attributes)

@@ -12,3 +12,7 @@ func _init(name: String, id: String, node_id: String) -> void:
 
 func enclose_thunk(thunk: ThunkCommand) -> void:
 	_enclosed_thunk = thunk
+
+
+func get_thunk() -> ThunkCommand:
+	return _enclosed_thunk

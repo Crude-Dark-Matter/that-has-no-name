@@ -26,6 +26,14 @@ func get_node_id() -> String:
 	return _node_id
 
 
+func get_name() -> String:
+	return _name
+
+
+func get_events() -> Array[GameEvent]:
+	return _events
+
+
 static func from_edge(edge: CommandEdge, composed = false) -> Command:
 	var name = edge._name
 	var id = edge._id

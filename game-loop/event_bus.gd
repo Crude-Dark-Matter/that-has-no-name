@@ -25,6 +25,39 @@ signal interaction_node_returned(node: InteractionNode)
 # "cast" to a Command with the Events appended from the destination node
 signal commands_approved(commands: Array[Command])
 # ------------------
+# PlayerCommandInput
+# ------------------
+# attempt is a String representation of PlayerInput. it is agnostic to the
+# input_type on the current InteractionNode
+signal issue_player_command_attempt(attempt: String)
+# ------------------
+# CommandValidator
+# ----------------
+signal player_command_attempt_failed()
+# emitted when a command attempt has been validated and selected, used by ui.
+# commands can be queued without player intervention
+signal select_validated_command(command: Command)
+# emitted after select_validated_command, listened by command_queue
+signal queue_command(command: Command)
+# ----------------
+# CommandQueue
+# ------------
+signal command_queued(command: Command)
+signal log_command(command: Command)
+signal parse_command(command: Command)
+# ------------
+# CommandLog
+# ----------
+signal command_logged(command: Command)
+# ----------
+# CommandParser
+# -------------
+signal command_parsed(command: Command)
+# -------------
+# GameEvent
+# ---------
+signal game_event_executed(event_id: String)
+# ---------
 # PlayerState
 # -----------
 signal player_state_readied()

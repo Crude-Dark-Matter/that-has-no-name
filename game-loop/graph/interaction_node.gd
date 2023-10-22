@@ -2,7 +2,7 @@ class_name InteractionNode extends Object
 # represents a node in any graph before being composed into a Command
 
 enum type {SIMPLE, INTERRUPT, THUNK}
-enum input_type {SELECT, LONG, SHORT}
+enum input_type {SELECT, PROMPT, SHORT}
 
 var _name : String
 # all id's are of format n.GRAPH.UNIQUE_INT
