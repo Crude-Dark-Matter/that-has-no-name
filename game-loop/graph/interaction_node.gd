@@ -1,14 +1,10 @@
-class_name InteractionNode extends Object
+class_name InteractionNode 
+extends GraphObject
 # represents a node in any graph before being composed into a Command
 
 enum type {SIMPLE, INTERRUPT, THUNK}
 enum input_type {SELECT, PROMPT, SHORT}
 
-var _name : String
-# all id's are of format n.GRAPH.UNIQUE_INT
-# where GRAPH can be a path with any number of subgraphs
-# eg. "n.graph_1.graph_2.graph_3.15"
-var _id : String
 # store id of events along with their conditions
 var _edges : Array[String]
 var _events : Array[GameEvent]

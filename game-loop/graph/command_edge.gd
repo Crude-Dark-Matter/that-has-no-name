@@ -1,56 +1,57 @@
 class_name CommandEdge 
-extends Object
+extends GraphObject
 # represents an edge in any graph before being composed into a Command
 
 enum type {SIMPLE, INTERRUPT, THUNK, COMPOSED}
 
-var _name : String
-# all id's are of format e.GRAPH.UNIQUE_INT
-# where GRAPH can be a path with any number of subgraphs
-# eg. "e.graph_1.graph_2.graph_3.15"
-var _id : String
+
 # text to be displayed when command is evaluated
 var _flavor_text: String
 # store id of connected InteractionNode
-var _node : String
+var _node_id : String
 # conditions which must all to evaluate to true to validate edge
 var _conditions : Array[EdgeCondition]
+# if edge is called by an InteractionNode whose goal is to mutate state
+# based on player input, there can be an optional prompt_event that
+# handles that player input
+var _prompt_event : GameEvent
 
 
-func _init(name: String, id: String, flavor_text: String, node: String, \
-		conditions: Array[EdgeCondition]) -> void:
+func _init(name: String, id: String, flavor_text: String, node_id: String, \
+		conditions: Array[EdgeCondition], prompt_event: GameEvent = null) \
+		-> void:
 	_name = name
 	_id = id
 	_flavor_text = flavor_text
-	_node = node
+	_node_id = node_id
 	_conditions = conditions
 
 
 ## Factory to create the appropriately subtyped CommandEdge
 static func create(_type: type, name: String, id: String, \
-		flavor_text: String, node: String, \
+		flavor_text: String, node_id: String, \
 		conditions: Array[EdgeCondition]) -> CommandEdge:
 	match _type:
 		type.SIMPLE:
 			return SimpleCommandEdge.new(name, id, \
-					flavor_text, node, conditions)
+					flavor_text, node_id, conditions)
 		type.INTERRUPT:
 			return InterruptCommandEdge.new(name, id, \
-					flavor_text, node, conditions)
+					flavor_text, node_id, conditions)
 		type.THUNK:
 			return ThunkCommandEdge.new(name, id, \
-					flavor_text, node, conditions)
+					flavor_text, node_id, conditions)
 		type.COMPOSED:
 			return ComposedCommandEdge.new(name, id, \
-					flavor_text, node, conditions)
+					flavor_text, node_id, conditions)
 		_:
 			return SimpleCommandEdge.new(name, id, \
-					flavor_text, node, conditions)
+					flavor_text, node_id, conditions)
 
 
 static func to_composed_edge(edge: SimpleCommandEdge) -> ComposedCommandEdge:
 	return create(type.COMPOSED, edge._name, edge._id, edge._flavor_text,\
-			edge._node, edge._conditions)
+			edge._node_id, edge._conditions)
 
 
 func get_id() -> String:
@@ -58,7 +59,7 @@ func get_id() -> String:
 
 
 func get_node_id() -> String:
-	return _node
+	return _node_id
 
 
 # (gamestate_key_path: String, edge_condition_predicate: Callable)

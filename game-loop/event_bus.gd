@@ -7,6 +7,22 @@ extends Node
 # constants to be used for attaching, connecting, or emitting signals
 # on _event_bus
 # --------------
+# Main
+# ____
+# Used to bring up debug panel for event bus. this allows emission of any
+# event on the event bus.
+signal start_debug()
+signal stop_debug()
+# ____
+# GraphLoader
+# -----------
+signal insert_command_edges(edges: Array[String])
+# GraphLoader must guarantee that any Interrupt is first in list
+# and any Thunk is last in list. there can be no more than 1 of 
+# either in any portion of the graph
+signal command_edges_returned(edges: Array[CommandEdge])
+signal interaction_nodes_returned(nodes: Array[InteractionNode])
+# -----------
 # InteractionContext
 # ------------------
 # "request" is used as InteractionContext should not care whether
@@ -15,18 +31,14 @@ extends Node
 # InteractionContext is agnostic to the sub-graph a node or edge
 # comes from. GraphLoader fills in needed "EXIT" CommandEdge and
 # other super/sub-graph CommandEdge's.
-# GraphLoader must guarantee that any Interrupt is first in list
-# and any Thunk is last in list. there can be no more than 1 of 
-# either in any portion of the graph
-signal request_command_edges(edge_id: Array[String])
-signal command_edges_returned(edge: Array[CommandEdge])
-signal request_interaction_nodes(node_id: Array[String])
-signal interaction_nodes_returned(node: Array[InteractionNode])
+signal request_command_edges(edge_ids: Array[String])
+signal request_interaction_nodes(node_ids: Array[String])
 # "commands_approved" is emitted when all nodes and edges of been
 # returned following setting a new _current_node, approval
 # of each edge has been determined and each approved edge has been
 # "cast" to a Command with the Events appended from the destination node
 signal commands_approved(commands: Array[Command])
+signal command_approval_revoked()
 # interrupts can be queued out of order
 signal queue_interrupt_command(command: Command)
 # ------------------
@@ -78,14 +90,19 @@ signal world_state_readied()
 
 
 func _ready() -> void:
-	pass
-
-
-func _process(_delta) -> void:
-	pass
+	start_debug.connect(_on_start_debug)
+	stop_debug.connect(_on_stop_debug)
 
 
 # to be used only when signal is created programatically
 func attach_signal(signal_name: String, signal_arguments = []) -> void:
 	add_user_signal(signal_name, signal_arguments)
 
+
+# for debugging signals
+func _on_start_debug() -> void:
+	pass
+
+
+func _on_stop_debug() -> void:
+	pass

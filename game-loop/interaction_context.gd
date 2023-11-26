@@ -129,6 +129,8 @@ func _on_edges_returned(edges: Array[CommandEdge]) -> void:
 # edges can only be inserted after InteractionContext has emitted a
 # signal indicating it is in a state 
 func _on_insert_command_edges(edge: Array[CommandEdge]) -> void:
+	# cancel previous command approval
+	_event_bus.command_approval_revoked.emit()
 	if edge[0] is SimpleCommandEdge:
 		pass
 		# simply attach to current node
